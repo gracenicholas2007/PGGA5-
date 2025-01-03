@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    /* background-color: black; */
+}
+body{
+    background-image: linear-gradient(to right, #ffffcc, #ffc266, #ffe0b3);
+}
+@keyframes home {
+    
+}
+hr{
+    background-color: #000;
+    height: 1px;
+    padding-top: 10px;
+
+}
+nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 50px; */
+    /* border: 1px solid red; */
+    align-items: center;
+    padding:15px 10%;
+    justify-content: space-between;
+    z-index: 10;
+    /* margin-left: 800px;
+    margin-top: 20px; */
+}
+nav .logo{
+    width: 120px;
+    height: 70px;
+    cursor: pointer;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+/* li{
+    display: inline;
+    
+} */
+ nav a{
+    color: black;
+    text-decoration: none;
+}
+
+h1{
+    margin-top: 100px;
+    font-size:5rem;
+}
+.home{
+    /* margin-top: 290px;
+    animation: home 5s ease 2s infinite alternate none;
+    font-size: 60px; */
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(to right, #ffffcc, #ffc266, #ffe0b3); */
+    padding: 0, 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
+}
+
+
+.home h1 span{
+    background: linear-gradient(#000, #000);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text ;
+    background-size: 0%;
+}
+.home h1 span:first-child{
+    animation: textcolor1 4s linear infinite alternate;
+}
+.home h1 span:last-child{
+    animation: textcolor2 4s linear infinite alternate;
+}
+.week-container, .contact-us{
+    height: 100vh;
+}
+.weekly, .contact{
+    display: block;
+    justify-content: space-between;
+}
+.weekly div, .contact div{
+    height: 20vh;
+    width: 100vh;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    box-shadow: 3px 3px 4px #000;
+    padding-top:30px ;
+    padding-left: 20px;
+}
+p{
+    font-size: 20px;
+}
+
+@keyframes textcolor1 {
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+@keyframes textcolor2 {
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 0%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.menu-icon{
+    display: none;
+}
+
+/* media queries fpr nav bar */
+@media only screen and (max-width:600px){
+    nav ul{
+        position: absolute;
+        width: 100%;
+        background: black;
+        color: white;
+        left: 0;
+        top:100%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        margin: 10px;
+        font-size: 12px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .show-menu{
+        max-height: 60px;
+    }
+}
+
+/* media query for header */
+@media only screen and (max-width:600px){
+    .home{
+        min-height: auto;
+        padding: 0;
+    }
+    .home h1{
+        font-size: 50px;
+    }
+}
+/* media query for weekly service */
+@media only screen and (max-width:600px){
+    p{
+        font-size: 15px;
+    }
+    .weekly, .contact{
+        display:block;
+    }
+    .weekly div, .contact div{
+        margin-top: 10px;
+        width: 400px;
+    }
+    .week-container h1{
+        font-size: 30px;
+    }
+    .weekly div h2{
+        font-size: 20px;
+    }
+    .contact-us h1{
+        font-size: 30px;
+    }
+    .contact div h2{
+        font-size: 20px;
+    }
+}
